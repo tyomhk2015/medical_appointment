@@ -1,4 +1,4 @@
-Day 1 (2022/06/25)
+## Day 1 (2022/06/25)
 
 TLDR: Pondering about how to deploy Next.js w/ SocketIO to Vercel
 
@@ -22,3 +22,4 @@ Though it did took sometime, the official documentation of SocketIO (<a href="ht
 
 Left tasks for the project is to show available rooms, search and filter existing rooms, and to make 1:1 connection with a room host and a participant.
 
+## Day 2 ()
