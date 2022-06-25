@@ -1,2 +1,3 @@
-# medical_appointment
-Next.js / Socket.io / Typescript
+# Medical Appointment 💉
+
+Next.js / Socket.io / Typescript / Tailwind CSS 
