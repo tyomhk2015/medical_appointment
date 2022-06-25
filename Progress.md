@@ -14,7 +14,8 @@ Deploying the frontend (Next.js) at one provider, deploying the server with Sock
 
 From local environment I successfully connected Next.js and SocketIO Server(Node.js), which are ran on different URL. To be honest, the only differences are the port numbers. (Figure 1-1)
 
-(img)
+![Screen Shot 2022-06-26 at 0 29 27](https://user-images.githubusercontent.com/35278730/175780509-930dfab3-ef30-462b-9082-209e6b0e016f.png)
+
 (Figure 1-1)
 
 Though it did took sometime, the official documentation of SocketIO (<a href="https://socket.io/docs/v3/handling-cors/">Link</a>) did help me to get through the CORS issue.
