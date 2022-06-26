@@ -23,7 +23,9 @@ const socketIOserver = new Server(httpServer, {
 socketIOserver.on("connection", (socket) => {
   socket["nickname"] = "Anon";
 
-  console.log(socket.id);
+  socket.on("clicked", (payload) => {
+    console.log(payload, 'by', socket.id);
+  });
 });
 
 httpServer.listen(8888, () => console.log('Activated the E-Card server.'));
