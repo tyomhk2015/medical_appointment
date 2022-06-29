@@ -20,7 +20,7 @@ const Home: NextPage = () => {
       return;
     }
 
-    const clientSocket = io("http://localhost:8080", {
+    const clientSocket = io("https://medical-appointment-server.herokuapp.com/", {
     });
 
     setSocket(clientSocket);
