@@ -28,3 +28,16 @@ Finished the main page of the application.
 
 Seperated server.js from the current repository.<br>
 The server.js will be maintained at <a href="https://github.com/tyomhk2015/medical_appointment_server">medical_appointment_server</a>
+
+Suceeded deploying websocket server (socket.io) on Heroku, and frontend on Vercel.
+
+The environment settings for deploying the websocket server took a quite time, due to unintuitive git repository provided by Heroku.<br>
+However I overcame the setting and CORS issue with current project which are not host in localhost.
+
+Satisfied with achieving what I have been aiming for, which is deploying websocket server and next.js app on different platform, and connecting them together with the websocket.
+
+Huge thanks to Heroku documentation, related to node.js deployment and websocket setting.
+
+The remaining tasks are implementing more websocket logics for chatting, making and searching for rooms, and video calls (WebRTC).
+
+## Day 3 (2022/06/29)
