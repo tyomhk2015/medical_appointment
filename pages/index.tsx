@@ -20,8 +20,7 @@ const Home: NextPage = () => {
       return;
     }
 
-    const clientSocket = io("http://localhost:8888", {
-      withCredentials: true,
+    const clientSocket = io("http://localhost:8080", {
     });
 
     setSocket(clientSocket);
@@ -39,7 +38,7 @@ const Home: NextPage = () => {
       >
         <ul className={`item-center grid grid-cols-2 justify-around gap-2`}>
           <li
-            className={`${selectedTab === 0 && `bg-sky-600`} shadow-[0_2px_2px_0_rgba(0,0,0,0.5)] hover:cursor-pointer group flex w-full justify-center rounded-xl bg-sky-200 p-3 transition-all duration-300 hover:bg-sky-600`}
+            className={`${selectedTab === 0 ? `bg-sky-600` : `bg-sky-200`} shadow-[0_2px_2px_0_rgba(0,0,0,0.5)] hover:cursor-pointer group flex w-full justify-center rounded-xl p-3 transition-all duration-300 hover:bg-sky-600`}
             data-key={0}
             onClick={changeTab}
           >
@@ -59,7 +58,7 @@ const Home: NextPage = () => {
             </svg>
           </li>
           <li
-            className={`${selectedTab === 1 && `bg-sky-600`} shadow-[0_2px_2px_0_rgba(0,0,0,0.5)] hover:cursor-pointer group flex w-full justify-center rounded-xl bg-sky-200 p-3 transition-all duration-300 hover:bg-sky-600`}
+            className={`${selectedTab === 0 ? `bg-sky-600` : `bg-sky-200`} shadow-[0_2px_2px_0_rgba(0,0,0,0.5)] hover:cursor-pointer group flex w-full justify-center rounded-xl bg-sky-200 p-3 transition-all duration-300 hover:bg-sky-600`}
             data-key={1}
             onClick={changeTab}
           >
@@ -98,7 +97,7 @@ const Home: NextPage = () => {
                 <span className={``}>11</span>
                 <span className={`text-right text-xl  font-bold`}>Doctor</span>
                 <span className={`text-right`}>1/2</span>
-                <svg className={`w-6 h-6 absolute top-0 right-0 rotate-90`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+                <svg className={`w-6 h-6 absolute top-0 right-0 rotate-90`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
               </a>
             </Link>
           </li>

@@ -22,4 +22,9 @@ Though it did took sometime, the official documentation of SocketIO (<a href="ht
 
 Left tasks for the project is to show available rooms, search and filter existing rooms, and to make 1:1 connection with a room host and a participant.
 
-## Day 2 ()
+## Day 2 (2022/06/29)
+
+Finished the main page of the application.
+
+Seperated server.js from the current repository.<br>
+The server.js will be maintained at <a href="https://github.com/tyomhk2015/medical_appointment_server">medical_appointment_server</a>
