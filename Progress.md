@@ -31,7 +31,9 @@ The server.js will be maintained at <a href="https://github.com/tyomhk2015/medic
 
 Suceeded deploying websocket server (socket.io) on Heroku, and frontend on Vercel.
 
-The environment settings for deploying the websocket server took a quite time, due to unintuitive git repository provided by Heroku.<br>
+<img width="873" alt="Screen Shot 2022-06-30 at 1 16 53" src="https://user-images.githubusercontent.com/35278730/176486319-3c1c584e-772e-49f3-930c-7edb5eb7bace.png">
+
+The environment settings for deploying the websocket server took some time, due to unintuitive git repository provided by Heroku.<br>
 However I overcame the setting and CORS issue with current project which are not host in localhost.
 
 Satisfied with achieving what I have been aiming for, which is deploying websocket server and next.js app on different platform, and connecting them together with the websocket.
