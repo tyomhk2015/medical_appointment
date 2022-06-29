@@ -15,15 +15,12 @@ const Home: NextPage = () => {
     setSelectedTab(Number(event.currentTarget.getAttribute('data-key')));
   }
 
-  console.log(selectedTab);
-
   useEffect(() => {
     if (socket || typeof window === "undefined") {
       return;
     }
 
-    const clientSocket = io("http://localhost:8888", {
-      withCredentials: true,
+    const clientSocket = io("http://localhost:8080", {
     });
 
     setSocket(clientSocket);
