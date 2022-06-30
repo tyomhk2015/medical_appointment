@@ -24,7 +24,7 @@ const Home: NextPage = () => {
     clientSocket.on("connect", () => {
       console.log("connected");
     });
-  }, []);
+  }, [socket]);
 
   const messageClick = () => {
     socket?.emit("clicked", "Button is clicked");
