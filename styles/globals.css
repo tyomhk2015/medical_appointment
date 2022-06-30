@@ -7,6 +7,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  background-color: #16bbed;
+}
+
 ul,
 ol {
   list-style-type: none;
