@@ -1,6 +1,38 @@
-const Login: React.FC = () => {
+import React, { useState } from "react";
+
+interface ILogin {
+  onSubmitHandler: (loginData: ILoginType) => void
+  errorMsg: string;
+}
+
+interface ILoginType {
+  user_name: string
+  room_name: string
+}
+
+const Login: React.FC<ILogin> = ({onSubmitHandler, errorMsg}) => {
+  const [loginData, setLoginData] = useState({
+    user_name: '',
+    room_name: ''
+  });
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const {name, value} = e.target
+    setLoginData({
+      ...loginData,
+      [name]: value
+    });
+  }
+
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Prevent the submission 
+    if (!loginData.user_name.trim() || !loginData.room_name.trim()) return;
+    onSubmitHandler(loginData);
+  }
+
   return (
-    <form>
+    <form onSubmit={submitHandler} method='POST'>
       <div
         className={`mt-4 grid gap-4 sm:mt-8 sm:flex sm:flex-col sm:items-center`}
       >
@@ -20,8 +52,10 @@ const Login: React.FC = () => {
             ></path>
           </svg>
           <input
-            className={`w-full rounded-lg py-2 text-center shadow-[0_0_4px_0_rgba(0,0,0,0.5)] transition-all duration-300 focus:scale-105`}
+            className={`border-solid border-b-[1px] border-b-[#16bbed] w-full rounded-lg py-2 text-center shadow-[0_0_4px_0_rgba(0,0,0,0.5)] transition-all duration-300 focus:scale-105`}
             type="text"
+            name='user_name'
+            onChange={onChange}
             placeholder="Enter your name"
           />
         </div>
@@ -41,15 +75,21 @@ const Login: React.FC = () => {
             ></path>
           </svg>
           <input
-            className={`w-full rounded-lg py-2 text-center shadow-[0_0_4px_0_rgba(0,0,0,0.5)] transition-all duration-300 focus:scale-105`}
+            className={`border-solid border-b-[1px] border-b-[#16bbed] w-full rounded-lg py-2 text-center shadow-[0_0_4px_0_rgba(0,0,0,0.5)] transition-all duration-300 focus:scale-105`}
             type="text"
+            name='room_name'
+            onChange={onChange}
             placeholder="Enter a room name"
           />
         </div>
       </div>
+      {errorMsg && (
+        <p className={`text-red-500 font-bold text-right mt-2 sm:mt-4`}>{errorMsg}</p>
+      )}
       <div className={`mt-4 flex justify-end`}>
         <button
           className={`scale-[0.9] rounded-xl bg-[#16bbed] p-4 text-xl font-bold text-white shadow-[0_2px_4px_0_rgba(0,0,0,0.3)] transition-all duration-200 hover:bg-sky-600 sm:scale-100`}
+          type='submit'
         >
           Join Room
         </button>
