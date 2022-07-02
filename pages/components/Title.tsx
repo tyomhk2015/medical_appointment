@@ -1,10 +1,10 @@
 const Title: React.FC = () => {
   return (
     <h1
-      className={`flex items-center justify-center text-center text-3xl font-bold text-[#16bbed]`}
+      className={`flex items-center justify-center text-center text-3xl font-bold text-[#10aeff]`}
     >
       <svg
-        className={`mr-3 h-10 w-10 fill-[#16bbed]`}
+        className={`mr-3 h-10 w-10 fill-[#10aeff]`}
         viewBox="0 0 512 512"
         xmlns="http://www.w3.org/2000/svg"
       >
