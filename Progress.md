@@ -42,4 +42,14 @@ Huge thanks to Heroku documentation, related to node.js deployment and websocket
 
 The remaining tasks are implementing more websocket logics for chatting, making and searching for rooms, and video calls (WebRTC).
 
-## Day 3 (2022/06/29)
+## Day 3 (2022/07/02)
+
+Implemented joining and leaving rooms provided by socketIO, and realtime update of rooms and participants.
+
+Validations for joining rooms are implemented.
+
+UI has been changed.
+
+I feel I'm getting more confident with Typescript. The time cost of dealing the Typescript error(warning) is getting shorter than one month ago.
+
+The remaining tasks are implementing more websocket logics for chatting and video calls (WebRTC).
