@@ -43,7 +43,7 @@ const Home: NextPage = () => {
     const deployedURL = "https://medical-appointment-server.herokuapp.com/";
     const localURL = "http://localhost:8080";
 
-    const clientSocket = io(localURL);
+    const clientSocket = io(deployedURL);
 
     setSocket(clientSocket);
 
